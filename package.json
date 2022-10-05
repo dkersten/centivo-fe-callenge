@@ -1,5 +1,5 @@
 {
-  "name": "adopt-me",
+  "name": "centivo-fe",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/dkersten/fem-react-v7.git"
+    "url": ""
   },
   "keywords": [],
   "author": "Dan Kersten",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/dkersten/fem-react-v7/issues"
+    "url": ""
   },
-  "homepage": "https://github.com/dkersten/fem-react-v7#readme",
+  "homepage": "",
   "devDependencies": {
     "eslint": "^8.8.0",
     "eslint-config-prettier": "^8.3.0",
