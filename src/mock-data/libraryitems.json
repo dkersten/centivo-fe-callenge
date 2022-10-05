@@ -19,6 +19,8 @@
         "createdAt": "2022-80-04",
         "authorFirstName": "Shawn",
         "authorLastName": "Spencer",
+        "publisherName": null,
+        "publisherAddress": null,
         "bookTitle": "Real Detectives, Fake Psychics",
         "bookGenre": ["Fiction", "Mystery"]
     },
@@ -74,7 +76,9 @@
             "cityOrTown": "Santa Barbara",
             "state": "California",
             "postalCode": "93101"
-        }
+        },
+        "bookTitle": null,
+        "bookGenre": null
     },
     {
         "id": "b1006a1004p1005",
@@ -95,7 +99,11 @@
         "id": "a1005",
         "createdAt": "2020-10-04",
         "authorFirstName": "Burton",
-        "authorLastName": "Guster"
+        "authorLastName": "Guster",
+        "publisherName": null,
+        "publisherAddress": null,
+        "bookTitle": null,
+        "bookGenre": null
     },
     {
         "id": "b1007a1006p1006",
