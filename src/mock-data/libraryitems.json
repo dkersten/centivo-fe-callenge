@@ -1,0 +1,130 @@
+[
+    {
+        "id": "b1000a1000p1000",
+        "createdAt": "2022-10-04",
+        "authorFirstName": "Shawn",
+        "authorLastName": "Spencer",
+        "publisherName": "Lassiter Publishing",
+        "publisherAddress": {
+            "street": "123 South Windsor Lane",
+            "cityOrTown": "Santa Barbara",
+            "state": "California",
+            "postalCode": "93101"
+        },
+        "bookTitle": "Blueberry Picking",
+        "bookGenre": ["Non-Fiction", "Tutorial"]
+    },
+    {
+        "id": "b1001a1001",
+        "createdAt": "2022-80-04",
+        "authorFirstName": "Shawn",
+        "authorLastName": "Spencer",
+        "bookTitle": "Real Detectives, Fake Psychics",
+        "bookGenre": ["Fiction", "Mystery"]
+    },
+    {
+        "id": "b1003a1002p1001",
+        "createdAt": "2022-1-20",
+        "authorFirstName": "Burton",
+        "authorLastName": "Guster",
+        "publisherName": "O'Hara Publishing",
+        "publisherAddress": {
+            "street": "221 Main Steet",
+            "cityOrTown": "Santa Barbara",
+            "state": "California",
+            "postalCode": "93101"
+        },
+        "bookTitle": "Parmaceutical Sales Rep Training",
+        "bookGenre": ["Non-Fiction", "Training"]
+    },
+    {
+        "id": "b1004a1003p1002",
+        "createdAt": "2022-10-04",
+        "authorFirstName": "Shawn",
+        "authorLastName": "Spencer",
+        "publisherName": "Vick and Co. Publishing",
+        "publisherAddress": {
+            "street": "525 Gthorndall Lane",
+            "cityOrTown": "Santa Barbara",
+            "state": "California",
+            "postalCode": "93101"
+        },
+        "bookTitle": "Keen Observations",
+        "bookGenre": ["Fiction", "Thriller", "Mystery"]
+    },
+    {
+        "id": "b1005p1003",
+        "createdAt": "2021-1-24",
+        "publisherName": "Lassiter Publishing",
+        "publisherAddress": {
+            "street": "123 South Windsor Lane",
+            "cityOrTown": "Santa Barbara",
+            "state": "California",
+            "postalCode": "93101"
+        },
+        "bookTitle": "Santa Barbara Mountain Biking Guide",
+        "bookGenre": ["Non-Fiction", "Activities", "Outdoors"]
+    },
+    {
+        "id": "p1004",
+        "createdAt": "2022-8-13",
+        "publisherName": "Vick and Co. Publishing",
+        "publisherAddress": {
+            "street": "525 Gthorndall Lane",
+            "cityOrTown": "Santa Barbara",
+            "state": "California",
+            "postalCode": "93101"
+        }
+    },
+    {
+        "id": "b1006a1004p1005",
+        "createdAt": "2022-10-04",
+        "authorFirstName": "Burton",
+        "authorLastName": "Guster",
+        "publisherName": "Lassiter Publishing",
+        "publisherAddress": {
+            "street": "123 South Windsor Lane",
+            "cityOrTown": "Santa Barbara",
+            "state": "California",
+            "postalCode": "93101"
+        },
+        "bookTitle": "Santa Barbara Seabirds Stats",
+        "bookGenre": ["Non-Fiction", "Sports", "Statistics"]
+    },
+    {
+        "id": "a1005",
+        "createdAt": "2020-10-04",
+        "authorFirstName": "Burton",
+        "authorLastName": "Guster"
+    },
+    {
+        "id": "b1007a1006p1006",
+        "createdAt": "2020-6-14",
+        "authorFirstName": "Juliet",
+        "authorLastName": "O'Hara",
+        "publisherName": "Vick and Co. Publishing",
+        "publisherAddress": {
+            "street": "123 South Windsor Lane",
+            "cityOrTown": "Santa Barbara",
+            "state": "California",
+            "postalCode": "93101"
+        },
+        "bookTitle": "Zero to Half Marathon in 60 Days",
+        "bookGenre": ["Non-Fiction", "Sports", "Exercise"]
+    },
+    {
+        "id": "b1007a1008p1006",
+        "createdAt": "2019-1-08",
+        "authorFirstName": "Shawn",
+        "authorLastName": "Spencer",
+        "publisherName": "O'Hara Publishing",
+        "publisherAddress": {
+            "street": "221 Main Steet",
+            "cityOrTown": "Santa Barbara",
+            "state": "California",
+            "postalCode": "93101"
+        },
+        "bookTitle": "The Yin Yang Killer",
+        "bookGenre": ["Fiction", "Mystery"]
+    }
+]
