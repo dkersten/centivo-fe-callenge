@@ -12,7 +12,7 @@
             "postalCode": "93101"
         },
         "bookTitle": "Blueberry Picking",
-        "bookGenre": ["Non-Fiction", "Tutorial"]
+        "bookGenre": "Non-Fiction"
     },
     {
         "id": "b1001a1001",
@@ -22,7 +22,7 @@
         "publisherName": null,
         "publisherAddress": null,
         "bookTitle": "Real Detectives, Fake Psychics",
-        "bookGenre": ["Fiction", "Mystery"]
+        "bookGenre": "Fiction"
     },
     {
         "id": "b1003a1002p1001",
@@ -37,7 +37,7 @@
             "postalCode": "93101"
         },
         "bookTitle": "Parmaceutical Sales Rep Training",
-        "bookGenre": ["Non-Fiction", "Training"]
+        "bookGenre": "Non-Fiction"
     },
     {
         "id": "b1004a1003p1002",
@@ -52,7 +52,7 @@
             "postalCode": "93101"
         },
         "bookTitle": "Keen Observations",
-        "bookGenre": ["Fiction", "Thriller", "Mystery"]
+        "bookGenre": "Fiction"
     },
     {
         "id": "b1005p1003",
@@ -65,7 +65,7 @@
             "postalCode": "93101"
         },
         "bookTitle": "Santa Barbara Mountain Biking Guide",
-        "bookGenre": ["Non-Fiction", "Activities", "Outdoors"]
+        "bookGenre": "Non-Fiction"
     },
     {
         "id": "p1004",
@@ -93,7 +93,7 @@
             "postalCode": "93101"
         },
         "bookTitle": "Santa Barbara Seabirds Stats",
-        "bookGenre": ["Non-Fiction", "Sports", "Statistics"]
+        "bookGenre": "Non-Fiction"
     },
     {
         "id": "a1005",
@@ -118,7 +118,7 @@
             "postalCode": "93101"
         },
         "bookTitle": "Zero to Half Marathon in 60 Days",
-        "bookGenre": ["Non-Fiction", "Sports", "Exercise"]
+        "bookGenre": "Non-Fiction"
     },
     {
         "id": "b1007a1008p1006",
@@ -133,6 +133,6 @@
             "postalCode": "93101"
         },
         "bookTitle": "The Yin Yang Killer",
-        "bookGenre": ["Fiction", "Mystery"]
+        "bookGenre": "Fiction"
     }
 ]

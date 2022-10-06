@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import LibraryItemForm from "../Components/LibraryItemForm";
 import LibraryItemRow from "../Components/LibraryItemRow";
 import LibraryItemData from "../mock-data/libraryitems.json";
 
@@ -19,9 +20,11 @@ const LibraryContainer = () => {
   }
 
   const renderLibraryItems = () => {
-    return libraryItems.map((item) => (
-      <LibraryItemRow key={item.id} delete={deleteItem} {...item} />
-    ));
+    if (libraryItems !== []) {
+      return libraryItems.map((item) => (
+        <LibraryItemRow key={item.id} deleteFunc={deleteItem} {...item} />
+      ));
+    }
   };
 
   const deleteItem = (id) => {
@@ -40,6 +43,11 @@ const LibraryContainer = () => {
     setLibraryItems(filteredArr);
   };
 
+  const addItem = (itemObj) => {
+    const updatedArr = [...libraryItems, itemObj];
+    setLibraryItems(updatedArr);
+  };
+
   return (
     <section className="library-container">
       {libraryItems === [] ? "Please wait while library items load..." : null}
@@ -56,9 +64,13 @@ const LibraryContainer = () => {
               <td></td>
             </tr>
           </thead>
-          <tbody>{renderLibraryItems()}</tbody>
+          <tbody>
+            {console.log(libraryItems)}
+            {renderLibraryItems()}
+          </tbody>
         </table>
       ) : null}
+      <LibraryItemForm addFunc={addItem} />
     </section>
   );
 };
