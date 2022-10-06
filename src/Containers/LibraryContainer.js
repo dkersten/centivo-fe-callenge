@@ -6,11 +6,12 @@ const LibraryContainer = () => {
   const [libraryItems, setLibraryItems] = useState([]);
 
   useEffect(() => {
-    requestPets();
+    getLibraryItems();
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
-  async function requestPets() {
-    // const res = await fetch(`http://mockupurl/petslibraryItems`);
+  async function getLibraryItems() {
+    // mockup api call to get all library items
+    // const res = await fetch(`http://mockupurl/libraryItems`);
     // const json = await res.json();
     // setLibraryItems(json.items);
 
@@ -19,8 +20,24 @@ const LibraryContainer = () => {
 
   const renderLibraryItems = () => {
     return libraryItems.map((item) => (
-      <LibraryItemRow key={item.id} {...item} />
+      <LibraryItemRow key={item.id} delete={deleteItem} {...item} />
     ));
+  };
+
+  const deleteItem = (id) => {
+    // mock api call to delete item
+    // fetch(`http://mockupurl/libraryItems/${id}`, {
+    //   method: "DELETE",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Accept: "application/json",
+    //   },
+    // })
+    //   .then((resp) => resp.json())
+
+    // update rendered list without item
+    const filteredArr = libraryItems.filter((item) => item.id !== id);
+    setLibraryItems(filteredArr);
   };
 
   return (
@@ -36,6 +53,7 @@ const LibraryContainer = () => {
               <td>Author</td>
               <td>Publisher</td>
               <td>Publisher Address</td>
+              <td></td>
             </tr>
           </thead>
           <tbody>{renderLibraryItems()}</tbody>
