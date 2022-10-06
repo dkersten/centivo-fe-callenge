@@ -244,7 +244,9 @@ const LibraryItemForm = (props) => {
           />
         </label>
       </fieldset>
-      <button type="submit">Submit</button>
+      <button className="btn" type="submit">
+        Submit
+      </button>
     </form>
   );
 };

@@ -75,19 +75,21 @@ const LibraryContainer = () => {
       {libraryItems === [] ? "Please wait while library items load..." : null}
 
       {libraryItems !== [] ? (
-        <table>
-          <thead>
-            <tr>
-              <td>Book Title</td>
-              <td>Book Genre</td>
-              <td>Author</td>
-              <td>Publisher</td>
-              <td>Publisher Address</td>
-              <td></td>
-            </tr>
-          </thead>
-          <tbody>{renderLibraryItems()}</tbody>
-        </table>
+        <div className="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Book Title</th>
+                <th>Book Genre</th>
+                <th>Author</th>
+                <th>Publisher</th>
+                <th>Publisher Address</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>{renderLibraryItems()}</tbody>
+          </table>
+        </div>
       ) : null}
       <LibraryItemForm
         addFunc={addItem}

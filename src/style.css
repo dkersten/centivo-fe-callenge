@@ -337,3 +337,123 @@ template {
 [hidden] {
   display: none;
 }
+
+h1, th, td, label, input {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #56595D;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.library {
+  margin-bottom: 3.5rem;
+}
+
+.table-container {
+  width: 100%;
+  overflow-x: scroll;
+}
+
+table {
+  margin: 0 auto 2.5rem;
+  box-shadow: rgb(0,0,0,10%) 0px 10px 50px;
+  border-spacing: 0;
+  border-radius: 8px;
+}
+
+table td {
+  padding: 1rem .75rem;
+  font-size: 15px;
+  letter-spacing: -.5px;
+}
+
+table th {
+  padding: 1.5rem .75rem;
+  text-align: left;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: -.5px;
+}
+
+thead {
+  background: #f2f5f7;
+  border-radius: 8px 8px 0 0;
+}
+
+thead th {
+  color: #516272;
+  border-bottom: 2px solid #e3e9ed;
+}
+
+tbody {
+  border-radius: 0 0 8px 8px;
+}
+
+tbody tr:nth-of-type(odd) {
+  background: #fafdff;
+}
+
+tbody tr:not(:last-of-type) td {
+  border-bottom: 1px solid #e3e9ed;
+}
+
+.btn {
+  border-radius: 3px;
+  padding: .25rem .75rem;
+}
+
+.btn-edit {
+  background: #fff;
+  border: 1px solid #516272;
+  color: #516272;
+}
+
+.btn-remove {
+  color: #591E1B;
+  background: #efc5c2;
+  border: 1px solid #591E1B;
+  margin-left: .75rem;
+}
+
+form {
+  margin: auto;
+  max-width: 800px;
+  padding: 1.5rem;
+  background: #fafdff;
+  box-shadow: rgb(0,0,0,10%) 0px 10px 50px;
+  border-radius: 8px;
+}
+
+form fieldset {
+  border: none;
+  background: #f2f3f4;
+  border-radius: 8px;
+  padding: 2rem 1.5rem;
+}
+
+form fieldset:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+form button {
+  background: #b7ecc4;
+  border: 1px solid #28513b;
+  color: #28513b;
+  padding: .5rem 1.5rem;
+  margin-top: 1.25rem;
+}
+
+form input {
+  border: 2px solid #e3e9ed;
+  padding: .25rem;
+  margin-top: .25rem;
+}
+
+form label:not(:last-of-type) {
+  margin-bottom: 1rem;
+  display: block;
+}

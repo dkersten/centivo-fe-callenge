@@ -5,7 +5,7 @@ const App = () => {
   return (
     <div>
       <h1>Digital Library</h1>
-      <section className="library-container">
+      <section className="library">
         <LibraryContainer />
       </section>
     </div>
