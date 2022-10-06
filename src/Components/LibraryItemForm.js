@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const LibraryItemForm = (props) => {
   const [bookTitle, setBookTitle] = useState("");
@@ -11,6 +11,22 @@ const LibraryItemForm = (props) => {
   const [publisherState, setPublisherState] = useState("");
   const [publisherPostalCode, setPublisherPostalCode] = useState("");
 
+  //   populate form with item that needs to be edited
+  useEffect(() => {
+    if (props.itemToUpdate !== null) {
+      setBookTitle(props.itemToUpdate.bookTitle);
+      setBookGenre(props.itemToUpdate.bookGenre);
+      setAuthorFirstName(props.itemToUpdate.authorFirstName);
+      setAuthorLastName(props.itemToUpdate.authorLastName);
+      setPublisherName(props.itemToUpdate.publisherName);
+      setPublisherStreet(props.itemToUpdate.publisherAddress.street);
+      setPublisherCity(props.itemToUpdate.publisherAddress.cityOrTown);
+      setPublisherState(props.itemToUpdate.publisherAddress.state);
+      setPublisherPostalCode(props.itemToUpdate.publisherAddress.postalCode);
+    }
+  }, [props.itemToUpdate]);
+
+  //   on form submit
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -82,18 +98,32 @@ const LibraryItemForm = (props) => {
       },
     };
 
-    // mockup call to api to add new record
-    //     fetch("http://mockupurl/libraryItems/", {
-    //     method: "POST",
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //       Accept: "application/json",
-    //     },
-    //     body: JSON.stringify(itemObj),
-    //   })
-    //     .then((resp) => resp.json());
-    //     .then((scorecard) => props.updateScorecardsFunc(scorecard));
-    props.addFunc(itemObj);
+    // conditional to check if this is new item or edited item
+    if (props.itemToUpdate === null) {
+      // mockup call to api to add new record
+      //     fetch("http://mockupurl/libraryItems/", {
+      //     method: "POST",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //       Accept: "application/json",
+      //     },
+      //     body: JSON.stringify(itemObj),
+      //   })
+      props.addFunc(itemObj);
+    } else {
+      itemObj.id = props.itemToUpdate.id;
+      itemObj.createdAt = props.itemToUpdate.createdAt;
+      // mockup call to api to add new record
+      //     fetch(`http://mockupurl/libraryItems/${itemObj.id}`, {
+      //     method: "PATCH",
+      //     headers: {
+      //       "Content-Type": "application/json",
+      //       Accept: "application/json",
+      //     },
+      //     body: JSON.stringify(itemObj),
+      //   })
+      props.updateLibraryFunc(itemObj);
+    }
 
     setBookTitle("");
     setBookGenre("");

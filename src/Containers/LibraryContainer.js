@@ -5,6 +5,7 @@ import LibraryItemData from "../mock-data/libraryitems.json";
 
 const LibraryContainer = () => {
   const [libraryItems, setLibraryItems] = useState([]);
+  const [itemToUpdate, setItemToUpdate] = useState(null);
 
   useEffect(() => {
     getLibraryItems();
@@ -22,7 +23,12 @@ const LibraryContainer = () => {
   const renderLibraryItems = () => {
     if (libraryItems !== []) {
       return libraryItems.map((item) => (
-        <LibraryItemRow key={item.id} deleteFunc={deleteItem} {...item} />
+        <LibraryItemRow
+          key={item.id}
+          deleteFunc={deleteItem}
+          editFunc={editItem}
+          {...item}
+        />
       ));
     }
   };
@@ -41,6 +47,22 @@ const LibraryContainer = () => {
     // update rendered list without item
     const filteredArr = libraryItems.filter((item) => item.id !== id);
     setLibraryItems(filteredArr);
+  };
+
+  const editItem = (id) => {
+    const itemObj = libraryItems.filter((item) => item.id === id);
+    setItemToUpdate(itemObj[0]);
+  };
+
+  const updateLibrary = (itemObj) => {
+    //   get index of item in library and update it with edited info
+    const index = libraryItems.findIndex((object) => {
+      return object.id === itemObj.id;
+    });
+    const updatedLibrary = [...libraryItems];
+    updatedLibrary[index] = itemObj;
+    setLibraryItems(updatedLibrary);
+    setItemToUpdate(null);
   };
 
   const addItem = (itemObj) => {
@@ -64,13 +86,14 @@ const LibraryContainer = () => {
               <td></td>
             </tr>
           </thead>
-          <tbody>
-            {console.log(libraryItems)}
-            {renderLibraryItems()}
-          </tbody>
+          <tbody>{renderLibraryItems()}</tbody>
         </table>
       ) : null}
-      <LibraryItemForm addFunc={addItem} />
+      <LibraryItemForm
+        addFunc={addItem}
+        itemToUpdate={itemToUpdate}
+        updateLibraryFunc={updateLibrary}
+      />
     </section>
   );
 };

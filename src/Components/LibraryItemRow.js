@@ -12,8 +12,14 @@ const LibraryItemRow = (props) => {
         </td>
       );
     } else {
-      return null;
+      return <td></td>;
     }
+  };
+
+  const editItem = (e) => {
+    const el = e.target.parentNode;
+    const id = el.dataset.itemId;
+    props.editFunc(id);
   };
 
   const deleteItem = (e) => {
@@ -37,7 +43,7 @@ const LibraryItemRow = (props) => {
         <button
           aria-label="Edit item"
           className="btn btn-edit"
-          data-item-id={props.id}
+          onClick={editItem}
         >
           Edit
         </button>
